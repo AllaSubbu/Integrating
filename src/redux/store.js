@@ -8,6 +8,9 @@ import { BugAssignReducer } from "./BugAssignReducer";
 import { BugReducer } from "./BugReducer";
 import { StaffProfileReducer } from "./StaffProfileReducer";
 import { StaffReducer} from "./StaffReducer";
+import { CustomerReducer } from "./CustomerReducer";
+import { CustomerProfileReducer } from "./CustomerProfileReducer";
+import { CustomerLoginReducer} from "./CustomerLoginReducer";
 
 
   const rootReducer = combineReducers({
@@ -16,6 +19,9 @@ import { StaffReducer} from "./StaffReducer";
     staffProfile:StaffProfileReducer,
     bug : BugReducer,
     bugAssign : BugAssignReducer,
+    customerlogin: CustomerLoginReducer,
+    customer: CustomerReducer,
+    customerProfile: CustomerProfileReducer,
   });
   
   const store = createStore(rootReducer, applyMiddleware(thunk));

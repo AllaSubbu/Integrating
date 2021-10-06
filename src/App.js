@@ -20,6 +20,12 @@ import { BugReport } from "./components/BugReport";
 import { BugSolution } from "./components/BugSolution";
 import { BugAssign } from "./components/BugAssign";
 import { AdminWelcome } from "./components/AdminWelcome";
+import { CustomerLogin } from "./components/CustomerLogin";
+import { CustomerList } from "./components/CustomerList";
+
+import { CustomerRegistration } from "./components/CustomerRegistration"
+import { CustomerProfile } from "./components/CustomerProfile";
+import { CustomerProfileUpdate } from "./components/CustomerUpdate";
 function App() {
   const history = useHistory();
   const state = useSelector((state) => state);
@@ -49,6 +55,12 @@ function App() {
       <Route exact path="/bug-solution" component={BugSolution} />
       <Route exact path="/bug-assign" component={BugAssign} />
       <Route exact path="/admin-welcome" component={AdminWelcome} />
+      <Route exact path="/customer-registration" component={CustomerRegistration} />
+      <Route exact path="/customer-signin" component={CustomerLogin} />
+      <Route exact path="/customer-list" component={CustomerList} />
+      
+      <Route exact path="/customer-profile" component={CustomerProfile} />
+      <Route exact path="/customer-update" component={CustomerProfileUpdate} />
 
 
       </>
